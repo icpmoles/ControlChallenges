@@ -178,6 +178,7 @@ CC.levelGroups = {
 
 // Cache DOM
 CC.pauseButton = $('#pauseButton');
+CC.startButton = $('#startButton');
 CC.playButton = $('#playButton');
 CC.variableInfo = $('#variableInfo');
 CC.popups = $('.popup');
@@ -213,6 +214,9 @@ CC.errorsBoxDownButton = $('#errorsBoxDownButton');
     CC.errorsBoxDownButton.on('click', makeErrorLogSmall);
 })();
 
+
+
+// CC.startButton.on('click', function() { console.log("start"); CC.play(); });
 CC.pauseButton.on('click', CC.pause.bind(CC));
 CC.playButton.on('click', CC.play.bind(CC));
 CC.tipsButton.on('click', function() {showPopup('#tipsPopup');});

@@ -97,7 +97,7 @@ body{background-color:#eef;}
 	background-color:#ddd;
 	padding:5em;
 	border-radius:2em;
-	/* z-index: 9000; */
+	z-index: 9000;
 }
 
 .popup h1 { text-align: center; font-size:4em; margin-top:20px; margin-bottom:20px;}

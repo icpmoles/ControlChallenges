@@ -62,10 +62,12 @@
 		</div>
 
 		<div id="confirmStartPopup" class="popup">
-			<h1>Press the button to start the simulation</h1>
-			<button id="playButton"        type="button" title="Play [Alt+P]"><span class="glyphicon glyphicon-play">START</span></button>
+			<h1>Press the button to start the simulation?</h1>
+			<button id="startButton" onclick="{ CC.play(); showPopup(null);  }" type="button" title="Play [Alt+P]"><span class="glyphicon glyphicon-play">START</span></button>
 		</div>
 
+		
+    
 		<!-- <div id="tipsPopup" class="popup">
 			<p>You can view your own variables by calling:<pre>monitor('name',value);</pre></p>
 			<p>If you need persistent state, you can use global variables. You will have to declare them outside your function with the 'var' keyword.</p>
