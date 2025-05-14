@@ -63,7 +63,7 @@ CC.loadLevel = function(name) {
     else 
         this.editor.setValue(this.activeLevel.boilerPlateCode);
     CC.loadCodeAndReset();
-    showPopup('#levelStartPopup');
+    // showPopup('#levelStartPopup');
 };
 
 CC.editorSetCode_preserveOld = function(code) {
@@ -108,7 +108,7 @@ CC.runSimulationStep = (function(dt) {
 
     if(this.activeLevel.levelComplete()) {
         this.levelSolvedTime.text(round(this.activeLevel.getSimulationTime(),2));
-        showPopup('#levelCompletePopup');
+         showPopup('#levelCompletePopup');
     }
     this.variableInfo.text(this.variableInfo.text()+this.activeLevel.infoText());    
 

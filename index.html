@@ -34,8 +34,8 @@
 				<button id="playButton"        type="button" title="Play [Alt+P]"><span class="glyphicon glyphicon-play"> </span></button>
 				<button id="tipsButton"        type="button" title="Tips"><span class="glyphicon glyphicon-question-sign"> </span></button>
 				<button id="boilerplateButton" type="button" title="Reset to boilerplate code"><span class="glyphicon glyphicon-remove"> </span></button>
-				<button id="solutionButton"    type="button" title="Sample solution"><span class="glyphicon glyphicon-book"> </span></button>
-				<button id="levelmenuButton"   type="button" title="Level menu"><span class="glyphicon glyphicon-th"> </span></button>
+				<!-- <button id="solutionButton"    type="button" title="Sample solution"><span class="glyphicon glyphicon-book"> </span></button> -->
+				<!-- <button id="levelmenuButton"   type="button" title="Level menu"><span class="glyphicon glyphicon-th"> </span></button> -->
 				<pre id="variableInfo"></pre>
 			</div>
 			<canvas id="cas"></canvas>
@@ -61,16 +61,16 @@
 			</div>
 		</div>
 
-		<div id="levelMenuPopup" class="popup">
-			<h1>Select a Level</h1>
-			<div id="levelList" class="centered"></div>
+		<div id="confirmStartPopup" class="popup">
+			<h1>Press the button to start the simulation</h1>
+			<button id="playButton"        type="button" title="Play [Alt+P]"><span class="glyphicon glyphicon-play">START</span></button>
 		</div>
 
-		<div id="tipsPopup" class="popup">
+		<!-- <div id="tipsPopup" class="popup">
 			<p>You can view your own variables by calling:<pre>monitor('name',value);</pre></p>
 			<p>If you need persistent state, you can use global variables. You will have to declare them outside your function with the 'var' keyword.</p>
 			<p>Your code for each level is saved in your browser.</p>
-		</div>
+		</div> -->
 		
 		<script src="js/jquery-1.11.2.js"></script>
 		<script src="js/numeric-1.2.6.js"></script>
