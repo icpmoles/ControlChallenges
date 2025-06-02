@@ -3,6 +3,7 @@
 function time () { return 0.001 * Date.now(); }
 
 var CC = {};
+const urlParams = new URLSearchParams(window.location.search);
 
 CC.canvas = document.getElementById('cas');
 CC.context = CC.canvas.getContext('2d');
@@ -50,14 +51,15 @@ CC.loadCodeAndReset = function () {
 }
 
 CC.loadLevel = function(name) {
-    if(!(name in Levels)) name = 'TutorialBlockWithFriction';
-    localStorage.setItem("lastLevel",name);
+    // if(!(name in Levels)) name = 'TutorialBlockWithFriction';
+    // localStorage.setItem("lastLevel",name);
     this.activeLevelName = name;
     this.activeLevel = new Levels[name]();
     $('#levelDescription').html(this.activeLevel.description);
     $('#levelTitle').text(this.activeLevel.title);
     document.title = this.activeLevel.title +': Control Challenges';
-    var savedCode = localStorage.getItem(this.activeLevel.name+"Code");
+    var savedCode = atob(urlParams.get('code'));
+    // console.log(savedCode);
     if(typeof savedCode == 'string' && savedCode.length > 10)
         this.editor.setValue(savedCode);
     else 
@@ -236,7 +238,7 @@ shortcut.add("Esc",function() {showPopup(null);}, {'type':'keydown','propagate':
 
 
 // popup close button
-$('.popup').prepend($('<button type="button" class="btn btn-danger closeButton" onclick="showPopup(null);" data-toggle="tooltip" data-placement="bottom" title="Close [ESC]"><span class="glyphicon glyphicon-remove"> </span></button>'));
+// $('.popup').prepend($('<button type="button" class="btn btn-danger closeButton" onclick="showPopup(null);" data-toggle="tooltip" data-placement="bottom" title="Close [ESC]"><span class="glyphicon glyphicon-remove"> </span></button>'));
 
 // level load buttons
 {
@@ -274,7 +276,7 @@ $('button').each(function(index, element){if(element.className==='') element.cla
 
 
 CC.pause();
-try { CC.loadLevel(localStorage.getItem("lastLevel")); }
+try { CC.loadLevel(urlParams.get('target')); }
 catch (e) { CC.logError(e); }
 CC.loadCodeAndReset();
 CC.gameLoop();
