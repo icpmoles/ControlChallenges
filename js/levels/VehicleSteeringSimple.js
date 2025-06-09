@@ -10,8 +10,8 @@ Levels.VehicleSteeringSimple = function()
     this.boilerPlateCode = "function controlFunction(vehicle){\n    return -0.03;\n};";
     this.difficultyRating = 1;
     this.description = "Steer the vehicle along the track by calculating the necessary steering angle in radians. The vehicle speed is constant. The vehicle has sensors that tell the distance to the track's edge in different directions relative to the vehicle.";
-    ImageDataCache.load('img/track.png');
-    this.model = new Models.Vehicle({trackImgURL: 'img/track.png', lateralAccelerationLimit: 40});
+    ImageDataCache.load('img/track.webp');
+    this.model = new Models.Vehicle({trackImgURL: 'img/track.webp', lateralAccelerationLimit: 40});
 }
 
 

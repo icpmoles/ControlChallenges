@@ -10,8 +10,8 @@ Levels.VehicleRacing = function()
     this.boilerPlateCode = "function controlFunction(vehicle){  \n  return {steering: 0, acceleration: 0};\n};";
     this.difficultyRating = 2;
     this.description = "Calculate the appropriate steering angle [radians] and acceleration [m/s²] for the vehicle. The lateral acceleration is limited. If you go too fast into a turn you won't be able to steer through it.";
-    ImageDataCache.load('img/track.png');
-    this.model = new Models.Vehicle({trackImgURL: 'img/track.png', constantSpeed:false});
+    ImageDataCache.load('img/track.webp');
+    this.model = new Models.Vehicle({trackImgURL: 'img/track.webp', constantSpeed:false});
 }
 
 
